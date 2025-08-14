@@ -6,7 +6,7 @@ from sklearn.preprocessing import RobustScaler
 import joblib
 
 # Load data
-data = pd.read_csv('BTP ML Model - Sheet1.csv')
+data = pd.read_excel('BTP ML Model.xlsx', sheet_name='Complete data')
 X = data[['H/h', 'S/h', 'GSI', 'mi', 'L2/L1']]
 y = data['Collapse multiplier']
 
@@ -36,3 +36,4 @@ joblib.dump(model, 'final_model.pkl')
 joblib.dump(scaler, 'scaler.pkl')
 
 print("Model trained on full dataset and saved!")
+
